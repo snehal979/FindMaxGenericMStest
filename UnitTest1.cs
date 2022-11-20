@@ -2,39 +2,39 @@ namespace FindMaxNum
 {
     public class Tests
     {
-        GenericClassOrMethod<string> GenericString = new GenericClassOrMethod<string>();
+        GenericMethod genericMethod = new GenericMethod();
         /// <summary>
-        /// Uc4_StringValue
+        /// Uc5_IntergerValue
         /// </summary>
 
         [Test]
-        public void GenericGivenmaxfirststringValue_whenanalysed_shouldreturnfistmax()
+        public void GMethodGivenmaxfirstname_whenanalysed_shouldreturnfistmax()
         {
 
 
-            string result = GenericString.GenericClass("Peach", "Apple", "Banana");
+            int result = genericMethod.FindMax(30, 2, 5);
 
-            Assert.AreEqual("Peach", result);
+            Assert.AreEqual(30, result);
         }
         [Test]
-        public void GenericGivenmaxSecondstringValue_whenanalysed_shouldreturnSecondmax()
+        public void GMethodGivenmaxSecondname_whenanalysed_shouldreturnSecondmax()
         {
 
-            string result = GenericString.GenericClass("Apple", "Peach", "Banana");
-            Assert.AreEqual("Peach", result);
+            int result = genericMethod.FindMax(3, 30, 5);
+            Assert.AreEqual(30, result);
         }
         [Test]
-        public void GenericGivenmaxStringValue_whenanalysed_shouldreturnThirdmax()
+        public void GMethodGivenmaxThirdname_whenanalysed_shouldreturnThirdmax()
         {
 
-            string result = GenericString.GenericClass("Banana", "Apple", "Peach");
-            Assert.AreEqual("Peach", result);
+            int result = genericMethod.FindMax(3, 5, 30);
+            Assert.AreEqual(30, result);
         }
 
 
-       
 
-       
+
+
 
 
 

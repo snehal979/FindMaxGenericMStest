@@ -6,19 +6,10 @@ using System.Threading.Tasks;
 
 namespace FindMaxNum
 {
-    internal class GenericClassOrMethod<T> where T : IComparable
+    // generic method 
+    public class GenericMethod
     {
-        T a;
-        T b;
-        T c ;
-        //Refactor
-        public GenericClassOrMethod()
-        {
-            this.a = a; this.b = b; this.c = c; 
-        }
-
-        // class of generic
-        public T GenericClass(T a, T b, T c) 
+        public T FindMax<T>(T a, T b, T c) where T : IComparable
         {
             if (a.CompareTo(b)>0 && a.CompareTo(c)>0)
             {
@@ -34,9 +25,5 @@ namespace FindMaxNum
                 return c;
             }
         }
-
-
-
-
     }
 }
