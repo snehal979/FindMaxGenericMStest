@@ -2,33 +2,39 @@ namespace FindMaxNum
 {
     public class Tests
     {
-        GenericClassOrMethod<int> genericClass = new GenericClassOrMethod<int>(30,5,2);
+        GenericClassOrMethod<float> GenericFloat = new GenericClassOrMethod<float>();
         /// <summary>
-        /// Uc4_IntergerValue
+        /// Uc4_FloatValue
         /// </summary>
-        [Test]
-        public void GMethodGivenmaxfirstname_whenanalysed_shouldreturnfistmax()
-        {
-            int result = genericClass.GenericClass(30, 2, 5);
 
-            Assert.AreEqual(30, result);
-        }
-        
         [Test]
-        public void GMethodGivenmaxSecondname_whenanalysed_shouldreturnSecondmax()
+        public void GenericGivenmaxfirstFloatValue_whenanalysed_shouldreturnfistmax()
         {
 
-            int result = genericClass.GenericClass(3, 30, 5);
-            Assert.AreEqual(30, result);
+
+            float result = GenericFloat.GenericClass(30.7F, 2.7F, 5.4F);
+
+            Assert.AreEqual(30.7F, result);
         }
+        [Test]
+        public void GenericGivenmaxSecondFloatValue_whenanalysed_shouldreturnSecondmax()
+        {
+
+            float result = GenericFloat.GenericClass(2.7F, 30.7F, 5.4F);
+            Assert.AreEqual(30.7F, result);
+        }
+        [Test]
+        public void GenericGivenmaxFloatValue_whenanalysed_shouldreturnThirdmax()
+        {
+
+            float result = GenericFloat.GenericClass(2.7F, 5.4F, 30.7F);
+            Assert.AreEqual(30.7F, result);
+        }
+
+
        
-        [Test]
-        public void GMethodGivenmaxThirdname_whenanalysed_shouldreturnThirdmax()
-        {
 
-            int result = genericClass.GenericClass(3, 5, 30);
-            Assert.AreEqual(30, result);
-        }
+       
 
 
 

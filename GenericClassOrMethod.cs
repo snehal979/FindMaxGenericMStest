@@ -12,7 +12,7 @@ namespace FindMaxNum
         T b;
         T c ;
         //Refactor
-        public GenericClassOrMethod(T a,T b,T c)
+        public GenericClassOrMethod()
         {
             this.a = a; this.b = b; this.c = c; 
         }
