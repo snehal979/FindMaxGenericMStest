@@ -4,40 +4,40 @@ namespace FindMaxNum
     {
         FindMaxNumber maxNum = new FindMaxNumber();
         /// <summary>
-        /// Uc2_1
+        /// Uc3_1
         /// </summary>
         [Test]
         public void GivenMaxfirstname_whenanalysed_shouldReturnfistmax()
         {
-            
 
-            float result = maxNum.FindMaxFloat(30.8F, 2.9F, 5.6F);
+
+            String result = maxNum.FindMaxString("Peach", "Apple", "Banana");
            
-            Assert.AreEqual(30.8, result);
+            Assert.AreEqual("Peach", result);
         }
         /// <summary>
-        /// Uc2_2
+        /// Uc3_2
         /// </summary>
         [Test]
         public void GivenMaxSecondname_whenanalysed_shouldReturnSecondmax()
         {
 
 
-            float result = maxNum.FindMaxFloat(2.9F, 30.8F, 5.6F);
+            String result = maxNum.FindMaxString("Apple", "Peach", "Banana");
 
-            Assert.AreEqual(30.8, result);
+            Assert.AreEqual("Peach", result);
         }
         /// <summary>
-        /// Uc2_3
+        /// Uc3_3
         /// </summary>
         [Test]
         public void GivenMaxThirdname_whenanalysed_shouldReturnThirdmax()
         {
 
 
-            float result = maxNum.FindMaxFloat(5.8F, 2.9F, 30.8F);
+            String result = maxNum.FindMaxString("Banana", "Apple", "Peach");
 
-            Assert.AreEqual(30.8, result);
+            Assert.AreEqual("Peach", result);
         }
 
 

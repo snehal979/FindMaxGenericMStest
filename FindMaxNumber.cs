@@ -8,14 +8,14 @@ namespace FindMaxNum
 {
     public class FindMaxNumber
     {
-        public float FindMaxFloat(float a, float b, float c)
+        public string FindMaxString(String a, String b, String c)
         {
-            if (a>b&& a>c)
+            if (a.CompareTo(b)>0 && a.CompareTo(c)>0)
             {
                 return a;
 
             }
-            else if (b>c && b>c)
+            else if (b.CompareTo(c)>0 && b.CompareTo(c)>0)
             {
                 return b;
             }
@@ -24,6 +24,7 @@ namespace FindMaxNum
                 return c;
             }
 
+            
         }
     }
 }
