@@ -2,43 +2,36 @@ namespace FindMaxNum
 {
     public class Tests
     {
-        FindMaxNumber maxNum = new FindMaxNumber();
+        GenericClassOrMethod<int> genericClass = new GenericClassOrMethod<int>(30,5,2);
         /// <summary>
-        /// Uc3_1
+        /// Uc4_IntergerValue
         /// </summary>
         [Test]
-        public void GivenMaxfirstname_whenanalysed_shouldReturnfistmax()
+        public void GMethodGivenmaxfirstname_whenanalysed_shouldreturnfistmax()
         {
+            int result = genericClass.GenericClass(30, 2, 5);
 
-
-            String result = maxNum.FindMaxString("Peach", "Apple", "Banana");
-           
-            Assert.AreEqual("Peach", result);
+            Assert.AreEqual(30, result);
         }
-        /// <summary>
-        /// Uc3_2
-        /// </summary>
+        
         [Test]
-        public void GivenMaxSecondname_whenanalysed_shouldReturnSecondmax()
+        public void GMethodGivenmaxSecondname_whenanalysed_shouldreturnSecondmax()
         {
 
-
-            String result = maxNum.FindMaxString("Apple", "Peach", "Banana");
-
-            Assert.AreEqual("Peach", result);
+            int result = genericClass.GenericClass(3, 30, 5);
+            Assert.AreEqual(30, result);
         }
-        /// <summary>
-        /// Uc3_3
-        /// </summary>
+       
         [Test]
-        public void GivenMaxThirdname_whenanalysed_shouldReturnThirdmax()
+        public void GMethodGivenmaxThirdname_whenanalysed_shouldreturnThirdmax()
         {
 
-
-            String result = maxNum.FindMaxString("Banana", "Apple", "Peach");
-
-            Assert.AreEqual("Peach", result);
+            int result = genericClass.GenericClass(3, 5, 30);
+            Assert.AreEqual(30, result);
         }
+
+
+
 
 
 
