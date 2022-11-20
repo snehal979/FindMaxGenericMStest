@@ -15,8 +15,15 @@ namespace FindMaxNum
             //assert validation the output
             Assert.AreEqual(30, result);
         }
-        
-        
+        public void GivenMaxSecondname_whenanalysed_shouldReturnSecondmax()
+        {
+          
+
+            int result = maxNum.FindMaxInterger(2, 30, 5);
+            
+            Assert.AreEqual(30, result);
+        }
+
 
 
 
