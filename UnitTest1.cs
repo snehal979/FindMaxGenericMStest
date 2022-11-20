@@ -4,31 +4,34 @@ namespace FindMaxNum
     {
         GenericMethod genericMethod = new GenericMethod();
         /// <summary>
-        /// Uc5_FloatValue
+        /// Uc5_StringValue
         /// </summary>
 
         [Test]
-        public void GMethodGivenmaxfirstFloatValue_whenanalysed_shouldreturnfistmax()
+        public void GMethodGivenmaxfirstStringValue_whenanalysed_shouldreturnfistmax()
         {
 
+            string result = genericMethod.FindMax("Peach", "Apple", "Banana");
 
-            float result = genericMethod.FindMax(30.7F, 2.7F, 5.4F);
-
-            Assert.AreEqual(30.7F, result);
+            Assert.AreEqual("Peach", result);
         }
         [Test]
-        public void GMethodGivenmaxSecondFloatValue_whenanalysed_shouldreturnSecondmax()
+        public void GMethodGivenmaxSecondStringValue_whenanalysed_shouldreturnfistmax()
         {
 
-            float result = genericMethod.FindMax(2.7F, 30.7F, 5.4F);
-            Assert.AreEqual(30.7F, result);
+
+            string result = genericMethod.FindMax("Apple", "Peach", "Banana");
+
+
+            Assert.AreEqual("Peach", result);
         }
         [Test]
-        public void GMethodGivenmaxFloatValue_whenanalysed_shouldreturnThirdmax()
+        public void GMethodGivenmaxTHIRDStringValue_whenanalysed_shouldreturnfistmax()
         {
 
-            float result = genericMethod.FindMax(2.7F, 5.4F, 30.7F);
-            Assert.AreEqual(30.7F, result);
+            string result = genericMethod.FindMax("Banana", "Apple", "Peach");
+
+            Assert.AreEqual("Peach", result);
         }
 
 
