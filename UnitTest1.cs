@@ -2,33 +2,33 @@ namespace FindMaxNum
 {
     public class Tests
     {
-        GenericClassOrMethod<float> GenericFloat = new GenericClassOrMethod<float>();
+        GenericClassOrMethod<string> GenericString = new GenericClassOrMethod<string>();
         /// <summary>
-        /// Uc4_FloatValue
+        /// Uc4_StringValue
         /// </summary>
 
         [Test]
-        public void GenericGivenmaxfirstFloatValue_whenanalysed_shouldreturnfistmax()
+        public void GenericGivenmaxfirststringValue_whenanalysed_shouldreturnfistmax()
         {
 
 
-            float result = GenericFloat.GenericClass(30.7F, 2.7F, 5.4F);
+            string result = GenericString.GenericClass("Peach", "Apple", "Banana");
 
-            Assert.AreEqual(30.7F, result);
+            Assert.AreEqual("Peach", result);
         }
         [Test]
-        public void GenericGivenmaxSecondFloatValue_whenanalysed_shouldreturnSecondmax()
+        public void GenericGivenmaxSecondstringValue_whenanalysed_shouldreturnSecondmax()
         {
 
-            float result = GenericFloat.GenericClass(2.7F, 30.7F, 5.4F);
-            Assert.AreEqual(30.7F, result);
+            string result = GenericString.GenericClass("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", result);
         }
         [Test]
-        public void GenericGivenmaxFloatValue_whenanalysed_shouldreturnThirdmax()
+        public void GenericGivenmaxStringValue_whenanalysed_shouldreturnThirdmax()
         {
 
-            float result = GenericFloat.GenericClass(2.7F, 5.4F, 30.7F);
-            Assert.AreEqual(30.7F, result);
+            string result = GenericString.GenericClass("Banana", "Apple", "Peach");
+            Assert.AreEqual("Peach", result);
         }
 
 
