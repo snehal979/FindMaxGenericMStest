@@ -8,7 +8,7 @@ namespace FindMaxNum
 {
     public class FindMaxNumber
     {
-        public int FindMaxInterger(int a, int b, int c)
+        public float FindMaxFloat(float a, float b, float c)
         {
             if (a>b&& a>c)
             {
